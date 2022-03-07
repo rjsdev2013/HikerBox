@@ -1,0 +1,14 @@
+# Query: nutshell
+# ContextLines: 1
+
+2 results - 2 files
+
+src/components/auth/Login.js:
+  31                  if (exists) {
+  32:                     // The user id is saved under the key hikerbox_user in session Storage. Change below if needed!
+  33                      setAuthUser(exists)
+
+src/components/auth/Register.js:
+  45                              if (createdUser.hasOwnProperty("id")) {
+  46:                                 // The user id is saved under the key hikerbox_user in session Storage. Change below if needed!
+  47                                  sessionStorage.setItem("hikerbox_user", createdUser.id)

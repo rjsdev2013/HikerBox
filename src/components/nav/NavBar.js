@@ -17,7 +17,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
             </li>
             {isAuthenticated
                 ? <li className="navbar__item">
-                    <Link className="navbar__link" to="/"> Gear </Link>
+                    <Link className="navbar__link" to="/gear"> Gear </Link>
                 </li>
                 : null}
             <li className="navbar__item">

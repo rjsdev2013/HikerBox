@@ -1,5 +1,5 @@
 import React,  {useState} from "react"
-import { ApplicationViews } from "src/ApplicationViews"
+import { ApplicationViews } from "./ApplicationViews"
 import { NavBar } from "./nav/NavBar"
 import "./HikerBox.css"
 
@@ -18,7 +18,7 @@ export const HikerBox = () => {
 
   return (
     <>
-      {/* <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated}/> */}
+      <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated}/>
       <ApplicationViews 
           setAuthUser={setAuthUser}
           isAuthenticated={isAuthenticated}

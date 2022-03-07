@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom";
-import { HikerBox } from './components/Nutshell';
+import { HikerBox } from './components/HikerBox';
 
 ReactDOM.render(
   <React.StrictMode>

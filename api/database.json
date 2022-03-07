@@ -1,19 +1,81 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "name": "Madison",
-        "email": "Madison@me.com"
-      },
-      {
-        "id": 2,
-        "name": "Brian",
-        "email": "Brian@me.com"
-      },
-      {
-        "id": 3,
-        "name": "Ryan",
-        "email": "Ryane@me.com"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "name": "Madison",
+      "email": "Madison@me.com"
+    },
+    {
+      "id": 2,
+      "name": "Brian",
+      "email": "Brian@me.com"
+    },
+    {
+      "id": 3,
+      "name": "Ryan",
+      "email": "Ryane@me.com"
+    }
+  ],
+  "gear": [
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "Nashville Pack",
+      "description": "lorem ipsum",
+      "weight": 9,
+      "quantity": 1,
+      "url": "https://nashvillepack.com/collections/packs-and-straps/products/the-cutaway-pack",
+      "inHB": false
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "name": "Osprey Kestrel 48",
+      "description": "lorem ipsum",
+      "weight": 48,
+      "quantity": 1,
+      "url": "https://www.rei.com/product/141491/osprey-kestrel-48-pack-mens?CAWELAID=120217890006018831&CAGPSPN=pla&CAAGID=107685714860&CATCI=pla-476625850964&cm_mmc=PLA_Google%7C21700000001700551_1414910002%7C92700056635456919%7CNB%7C71700000062011463&gclid=Cj0KCQiA95aRBhCsARIsAC2xvfwHCWjy6BAD0nqLlWJ5CcaQKgNccvACHJ3oJPeKjxPzW8TAoXDftpcaApMDEALw_wcB&gclsrc=aw.ds",
+      "inHB": false
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "Nemo Air Sleeping Pad",
+      "description": "lorem ipsum",
+      "weight": 8,
+      "quantity": 1,
+      "url": "",
+      "inHB": false
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "name": "REI Quarterdome SL1",
+      "description": "lorem ipsum",
+      "weight": 36,
+      "quantity": 1,
+      "url": "",
+      "inHB": false
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "name": "REI Magma 30 Degree Sleeping Bag",
+      "description": "lorem ipsum",
+      "weight": 14,
+      "quantity": 1,
+      "url": "https://www.rei.com/product/141491/osprey-kestrel-48-pack-mens?CAWELAID=120217890006018831&CAGPSPN=pla&CAAGID=107685714860&CATCI=pla-476625850964&cm_mmc=PLA_Google%7C21700000001700551_1414910002%7C92700056635456919%7CNB%7C71700000062011463&gclid=Cj0KCQiA95aRBhCsARIsAC2xvfwHCWjy6BAD0nqLlWJ5CcaQKgNccvACHJ3oJPeKjxPzW8TAoXDftpcaApMDEALw_wcB&gclsrc=aw.ds",
+      "inHB": false
+    },
+    {
+      "description": "lightweight green fanny",
+      "name": "Osprey Hip Pack",
+      "weight": "3",
+      "url": "https://www.rei.com/product/194051/osprey-ultralight-stuff-waist-pack",
+      "quantity": "1",
+      "userId": 2,
+      "id": 6,
+      "inHB": false
+    }
+  ]
+}

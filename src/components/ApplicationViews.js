@@ -2,6 +2,9 @@ import React from "react"
 import { Route, Routes, Navigate } from "react-router-dom"
 import { Login } from './auth/Login'
 import { Register } from './auth/Register'
+import { AddGearForm } from "./Gear/gearForm"
+import { GearList } from "./Gear/gearList.js"
+import { Home } from "./Home"
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
   const PrivateRoute = ({ children }) => {
@@ -18,11 +21,21 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
       <Routes>
         <Route exact path="/login" element={<Login setAuthUser={setAuthUser} />} />
         <Route exact path="/register" element={<Register />} />
-        <Route  path="/" element={
+        <Route exact path="/gear" element={
             <PrivateRoute>
-              Add component here
+              <GearList/>
             </PrivateRoute>
         } />
+        <Route exact path="/" element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          } />
+        <Route exact path="/gearform" element={
+            <PrivateRoute>
+              <AddGearForm />
+            </PrivateRoute>
+          } />
       </Routes>
 
     </>
