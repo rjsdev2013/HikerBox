@@ -18,38 +18,52 @@
   ],
   "lists": [
     {
-      "id": 1,
-      "name": "new list",
-      "userId": 2
-    },
-    {
-      "0": {
-        "id": 1,
-        "name": "new list",
-        "userId": 2
-      },
-      "name": "new test list",
-      "new test list": "new test list",
-      "id": 2
-    },
-    {
-      "0": {
-        "id": 1,
-        "name": "new list",
-        "userId": 2
-      },
-      "1": {
-        "0": {
-          "id": 1,
-          "name": "new list",
-          "userId": 2
-        },
-        "name": "new test list",
-        "new test list": "new test list",
-        "id": 2
-      },
-      "list number 3": "list number 3",
+      "New List Again": "New List Again",
       "id": 3
+    },
+    {
+      "name": "New List Again!!!",
+      "id": 4
+    },
+    {
+      "name": "Best List",
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "New List",
+      "userId": 2,
+      "id": 7
+    },
+    {
+      "name": "new list name",
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "name": "Go Away List",
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "name": "third list",
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "name": "final list",
+      "userId": 2,
+      "id": 11
+    },
+    {
+      "name": "New List List List",
+      "userId": 2,
+      "id": 12
+    },
+    {
+      "name": "Lynn's Awesome List",
+      "userId": 2,
+      "id": 13
     }
   ],
   "gear": [
