@@ -4,6 +4,7 @@ import { Login } from './auth/Login'
 import { Register } from './auth/Register'
 import { AddGearForm } from "./Gear/gearForm"
 import { GearList } from "./Gear/gearList.js"
+import {PackListList} from "./PackLists/PackListList.js"
 import { Home } from "./Home"
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
@@ -34,6 +35,11 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
         <Route exact path="/gearform" element={
             <PrivateRoute>
               <AddGearForm />
+            </PrivateRoute>
+          } />
+        <Route exact path="/lists" element={
+            <PrivateRoute>
+              <PackListList />
             </PrivateRoute>
           } />
       </Routes>

@@ -16,6 +16,42 @@
       "email": "Ryane@me.com"
     }
   ],
+  "lists": [
+    {
+      "id": 1,
+      "name": "new list",
+      "userId": 2
+    },
+    {
+      "0": {
+        "id": 1,
+        "name": "new list",
+        "userId": 2
+      },
+      "name": "new test list",
+      "new test list": "new test list",
+      "id": 2
+    },
+    {
+      "0": {
+        "id": 1,
+        "name": "new list",
+        "userId": 2
+      },
+      "1": {
+        "0": {
+          "id": 1,
+          "name": "new list",
+          "userId": 2
+        },
+        "name": "new test list",
+        "new test list": "new test list",
+        "id": 2
+      },
+      "list number 3": "list number 3",
+      "id": 3
+    }
+  ],
   "gear": [
     {
       "id": 1,

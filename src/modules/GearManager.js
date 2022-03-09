@@ -16,3 +16,18 @@ export const addGearItem = (newGearItem) => {
         body: JSON.stringify(newGearItem)
     }).then(response => response.json)
 }
+
+export const getAllListNames = () => {
+    return fetch (`${remoteURL}/lists`)
+    .then(response => response.json())
+}
+
+export const addNewListName = (newListName) => {
+    return fetch(`${remoteURL}/lists`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newListName)
+    }).then(response=>response.json)
+}
