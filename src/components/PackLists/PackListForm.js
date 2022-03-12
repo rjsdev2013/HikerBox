@@ -38,7 +38,6 @@ export const PackListForm = ({setShowResults}) => {
                     <input type="text" 
                         className="form__input__field" 
                         id="name" 
-                        // onChange={handleInputChange} 
                         required value={listName.name} 
                         placeholder="New Packing List Name" 
                         onKeyPress={handleKeyPress}/> 

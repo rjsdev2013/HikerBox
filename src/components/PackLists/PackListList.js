@@ -25,6 +25,8 @@ export const PackListList = () => {
         getListNames()
     }, [showResults]);
 
+
+
     return (
         <>
         <h2 className="page__title">Packing Lists</h2>
@@ -35,7 +37,7 @@ export const PackListList = () => {
                                  /> : null }
         </div>
 
-        <div className="gearItem_card">
+        <div className="packList_cards">
             {listName.map(l =>
                 <PackListCard
                 key={l.id}

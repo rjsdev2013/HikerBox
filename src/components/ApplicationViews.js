@@ -6,6 +6,7 @@ import { AddGearForm } from "./Gear/gearForm"
 import { GearList } from "./Gear/gearList.js"
 import {PackListList} from "./PackLists/PackListList.js"
 import { Home } from "./Home"
+import { GearListForm } from "./GearList/gearListForm"
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
   const PrivateRoute = ({ children }) => {
@@ -40,6 +41,11 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
         <Route exact path="/lists" element={
             <PrivateRoute>
               <PackListList />
+            </PrivateRoute>
+          } />
+        <Route exact path="/editPackingList" element={
+            <PrivateRoute>
+              <GearListForm />
             </PrivateRoute>
           } />
       </Routes>

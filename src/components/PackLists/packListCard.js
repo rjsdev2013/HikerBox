@@ -8,8 +8,9 @@ export const PackListCard = ({listName}) => {
         <div className="listName_cards">
             <div className="listName_cards">
                 <h4 className="listName_title" target="_blank"> {listName.name}</h4>
+                <p>Total Weight: 0oz</p>
                 <div className="crud__btns">
-                    <button type="button" className="crud__btn btn" id="edit__btn"onClick={() => {navigate(`/`)}} >Edit</button> 
+                    <button type="button" className="crud__btn btn" id="edit__btn"onClick={() => {navigate(`/editPackingList`)}} >Edit</button> 
             
                 </div>
             </div>
