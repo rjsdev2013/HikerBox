@@ -8,9 +8,12 @@ import { GearCard } from "./gearCard";
 export const GearList = () => {
     const [gearItems, setGearItems] = useState([]);
     const navigate = useNavigate();
+    const sessionUser = JSON.parse(window.sessionStorage.getItem("hikerbox_user"))
+    const sessionUserId = sessionUser.id
+
 
     const getGearItems = () => {
-        return getAllGear().then(gearFromAPI => {
+        return getAllGear(sessionUserId).then(gearFromAPI => {
             setGearItems(gearFromAPI)
         } );
     }
@@ -18,6 +21,13 @@ export const GearList = () => {
     useEffect(() => {
         getGearItems()
     }, []);
+
+    const handleHikerBox = () => {
+        
+    }
+
+
+
 
     return (
         <>

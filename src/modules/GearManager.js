@@ -1,11 +1,9 @@
 import react from "react";
 
 const remoteURL = "http://localhost:8088"
-const sessionUser = JSON.parse(window.sessionStorage.getItem("hikerbox_user"))
-const sessionUserId = sessionUser.id
 
-export const getAllGear = () => {
-    return fetch(`${remoteURL}/gear?userId=${sessionUserId}`)
+export const getAllGear = (id) => {
+    return fetch(`${remoteURL}/gear?userId=${id}`)
     .then(response => response.json())
 }
 
@@ -19,8 +17,8 @@ export const addGearItem = (newGearItem) => {
     }).then(response => response.json)
 }
 
-export const getAllListNames = () => {
-    return fetch (`${remoteURL}/lists?userId=${sessionUserId}`)
+export const getAllListNames = (id) => {
+    return fetch (`${remoteURL}/lists?userId=${id}`)
     .then(response => response.json())
 }
 
@@ -32,4 +30,20 @@ export const addNewListName = (newListName) => {
         },
         body: JSON.stringify(newListName)
     }).then(response=>response.json)
+}
+
+export const addGearListItem = (newGearListItem) => {
+    return fetch(`${remoteURL}/gearList`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newGearListItem)
+    }).then(response => response.json)
+}
+
+
+export const getAllGearListItems = (id) => {
+    return fetch(`${remoteURL}/gearList?userId=${id}`)
+    .then(response => response.json())
 }

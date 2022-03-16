@@ -127,5 +127,46 @@
       "id": 6,
       "inHB": false
     }
+  ],
+  "gearList": [
+    {
+      "id": 1,
+      "userId:": 2,
+      "gearId": 3,
+      "listId": 1
+    },
+    [
+      1
+    ],
+    {
+      "userId": 2,
+      "gearId": 1,
+      "listId": "7",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "gearId": 2,
+      "listId": "7",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "gearId": 2,
+      "listId": "7",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "gearId": 3,
+      "listId": "7",
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "gearId": 4,
+      "listId": "7",
+      "id": 7
+    }
   ]
 }

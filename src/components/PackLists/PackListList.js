@@ -14,9 +14,11 @@ export const PackListList = () => {
     }]);
     const [showResults, setShowResults] = useState(false)
     const unHideForm = () => setShowResults(true)
+    const sessionUser = JSON.parse(window.sessionStorage.getItem("hikerbox_user"))
+    const sessionUserId = sessionUser.id
 
     const getListNames = () => {
-        return getAllListNames().then(listsFromAPI => {
+        return getAllListNames(sessionUserId).then(listsFromAPI => {
             setListName(listsFromAPI)
         } );
     }
@@ -42,6 +44,7 @@ export const PackListList = () => {
                 <PackListCard
                 key={l.id}
                 listName={l}
+                listId = {l.id}
                 />
             )}
         </div>  

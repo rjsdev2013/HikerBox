@@ -4,7 +4,6 @@ import './gearForm.css'
 import './../HikerBox.css'
 import { addGearItem } from "../../modules/GearManager";
 
-//This is the form users use to add new articles. Coded by Brian. 
 
 export const AddGearForm = () => {
     const sessionUser = JSON.parse(window.sessionStorage.getItem("hikerbox_user"))

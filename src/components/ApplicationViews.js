@@ -43,7 +43,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
               <PackListList />
             </PrivateRoute>
           } />
-        <Route exact path="/editPackingList" element={
+        <Route exact path="/:listNameId/editPackingList" element={
             <PrivateRoute>
               <GearListForm />
             </PrivateRoute>
