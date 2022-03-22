@@ -39,6 +39,7 @@ export const AddGearForm = () => {
     }
 
     return (
+        <>
         <form>
             <div  className="form__inputs">
                 <h2 className="page__title">Add New Gear</h2>
@@ -82,5 +83,6 @@ export const AddGearForm = () => {
                 
             </div>
         </form>
+        </>
     )
 }

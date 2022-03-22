@@ -4,7 +4,7 @@ import "./gearCard.css"
 import "./../HikerBox.css"
 import { useNavigate } from "react-router-dom";
 
-export const GearCard = ({gearItem}) => {
+export const GearCard = ({gearItem, handleDeleteGearItem}) => {
     const navigate = useNavigate();
 
 
@@ -16,7 +16,11 @@ export const GearCard = ({gearItem}) => {
                     <p><em>{gearItem.description}</em></p>
 
                 <div className="crud__btns">
-                    <button type="button" className="crud__btn btn" id="edit__btn"onClick={() => {navigate(`/`)}} >Edit</button> 
+                    <button type="button" className="crud__btn btn" id="edit__btn"onClick={() => {navigate(`/${gearItem.id}/edit`)}} >Edit</button> 
+            
+                </div>
+                <div className="crud__btns">
+                    <button type="button" className="crud__btn btn" id="delete_btn" onClick={() => {handleDeleteGearItem(gearItem.id)}}>Delete</button> 
             
                 </div>
                 <div className="crud__btns">

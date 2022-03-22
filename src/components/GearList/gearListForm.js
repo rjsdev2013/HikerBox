@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { GearCard } from "../Gear/gearCard";
-import { getAllGear } from "../../modules/GearManager";
+import { getAllGear, getListNameById } from "../../modules/GearManager";
 import { GearListSelectCard } from "./gearListSelectCard";
-import { addGearListItem, getAllGearListItems } from "../../modules/GearManager";
+import { addGearListItem} from "../../modules/GearManager";
 
 export const GearListForm = () => {
     const [gearItems, setGearItems] = useState([]);
     const [gearListItems, setGearListItems] = useState([]);
+    const [listName, setListName] = useState([])
     const navigate = useNavigate();
     const sessionUser = JSON.parse(window.sessionStorage.getItem("hikerbox_user"))
     const sessionUserId = sessionUser.id
@@ -20,34 +20,36 @@ export const GearListForm = () => {
         } );
     }
 
+    const getListName = (id) => {
+        return getListNameById(id).then(listName => {
+            setListName(listName)
+        })
+    }
+
+
     useEffect(() => {
         getGearItems()
+        getListName(listNameId)
+       
     }, []);
 
 
-
-    //THIS SHOULD BE USED WHEN NEW BOXES ARE CHECKED AFTER LIST HAS RENDERED
-    // const handleInputChange = (event) => {
-    //     const newGearItem = {...gearItem}
-    //     let selectedVal = event.target.value
-    //     newGearItem[event.target.id] = selectedVal
-    //     setGearItem(newGearItem)
     
 
     const handleSubmit = (event) => {
         const promises = []
+        const listNameIdINT = parseInt(listNameId)
         for (const e of gearListItems){
             const newGearListItem = {
             userId: sessionUserId,
             gearId: e,
-            listId: listNameId
+            listId: listNameIdINT
             }
     
         promises.push(addGearListItem(newGearListItem))
         }
         Promise.all(promises).then(navigate("/"))
     }
-
     
     const isSelected = (event) => {
         console.log('we got to the setState Function!')
@@ -59,7 +61,7 @@ export const GearListForm = () => {
 
     return (
         <>
-        <h2 className="page__title">Gear Options for ListNameGoesHere</h2>
+        <h2 className="page__title">Gear Options for {listName.name}</h2>
         <div className="form__input crud__btn">
                     <button className="submit__btn" onClick={handleSubmit}>
                         Save Gear to List

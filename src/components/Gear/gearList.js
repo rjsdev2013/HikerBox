@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {getAllGear} from "./../../modules/GearManager"
+import {getAllGear, deleteGearItem } from "./../../modules/GearManager"
 import { GearCard } from "./gearCard";
 
 
@@ -26,6 +26,11 @@ export const GearList = () => {
         
     }
 
+    const handleDeleteGearItem = (id) => {
+        deleteGearItem(id)
+        .then(() => getAllGear(sessionUserId).then(setGearItems));
+    };
+
 
 
 
@@ -40,6 +45,7 @@ export const GearList = () => {
                 <GearCard
                 key={gearItem.id}
                 gearItem={gearItem}
+                handleDeleteGearItem = {handleDeleteGearItem}
                 />
             )}
         </div>
